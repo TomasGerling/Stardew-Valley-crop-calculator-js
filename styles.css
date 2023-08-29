@@ -1,6 +1,4 @@
 body {
-  height: 80vh;
-  width: 100vw;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -10,18 +8,26 @@ body {
   background-color: #3b2b2b;
 }
 
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .container-wrap {
   background: radial-gradient(circle at center, #d87913, #704928);
   max-width: 50vw;
   border-radius: 50px;
   padding: 30px;
-  align-items: center;
+  margin: auto; /* Centrar verticalmente */
+  flex: 1; /* Expande para empujar el footer hacia abajo */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .container {
-  background: linear-gradient(#fbac68, #fdbc6c); /* Agregamos el gradiente aquí */
-  border-radius: 18px; /* Borde redondeado para el contenido */
-  padding: 20px; /* Añadimos el padding para el contenido */
+  background: linear-gradient(#fbac68, #fdbc6c);
+  border-radius: 18px;
+  padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -79,33 +85,32 @@ footer p {
   margin-left: 5px;
   vertical-align: middle;
 }
+
+/* Estilos para pantallas pequeñas (hasta 576px) */
 @media (max-width: 576px) {
   .container-wrap {
     max-width: 90vw;
-    border-radius: 0; /* Eliminar el redondeo de bordes en pantallas pequeñas */
+    border-radius: 0;
   }
   .container {
     padding: 10px;
   }
 }
 
-/* Estilos para pantallas medianas (tabletas) */
+/* Estilos para pantallas medianas (de 577px a 992px) */
 @media (min-width: 577px) and (max-width: 992px) {
   .container-wrap {
     max-width: 100vw;
   }
-  .container{
-    height: 70vh;
-  }
-  footer{
-    height: 13vh;
+  .container {
+    padding: 15px;
   }
 }
 
-/* Estilos para pantallas grandes (escritorio) */
+/* Estilos para pantallas grandes (más de 993px) */
 @media (min-width: 993px) {
   .container-wrap {
-    max-width: 100vw; /* Reducir el ancho máximo en pantallas grandes */
+    max-width: 80vw;
   }
   .container {
     padding: 30px;
