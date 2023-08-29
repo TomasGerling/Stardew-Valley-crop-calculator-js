@@ -1,0 +1,113 @@
+body {
+  height: 80vh;
+  width: 100vw;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background: url("https://stardewvalley.net/wp-content/uploads/2017/12/stardewbackground.png") no-repeat fixed center center / cover;
+  background-color: #3b2b2b;
+}
+
+.container-wrap {
+  background: radial-gradient(circle at center, #d87913, #704928);
+  max-width: 50vw;
+  border-radius: 50px;
+  padding: 30px;
+  align-items: center;
+}
+
+.container {
+  background: linear-gradient(#fbac68, #fdbc6c); /* Agregamos el gradiente aquí */
+  border-radius: 18px; /* Borde redondeado para el contenido */
+  padding: 20px; /* Añadimos el padding para el contenido */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+}
+
+#crop-select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#crop-info {
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+
+footer {
+  background-color: #3b2b2b;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+footer a svg {
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+  transition: fill 0.3s ease;
+}
+
+footer a svg:hover {
+  fill: #0077b5;
+}
+
+footer a {
+  color: white;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+.gold-icon {
+  width: 18px;
+  height: 18px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+@media (max-width: 576px) {
+  .container-wrap {
+    max-width: 90vw;
+    border-radius: 0; /* Eliminar el redondeo de bordes en pantallas pequeñas */
+  }
+  .container {
+    padding: 10px;
+  }
+}
+
+/* Estilos para pantallas medianas (tabletas) */
+@media (min-width: 577px) and (max-width: 992px) {
+  .container-wrap {
+    max-width: 100vw;
+  }
+  .container{
+    height: 70vh;
+  }
+  footer{
+    height: 13vh;
+  }
+}
+
+/* Estilos para pantallas grandes (escritorio) */
+@media (min-width: 993px) {
+  .container-wrap {
+    max-width: 100vw; /* Reducir el ancho máximo en pantallas grandes */
+  }
+  .container {
+    padding: 30px;
+  }
+}
