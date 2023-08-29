@@ -6,6 +6,8 @@ body {
   flex-direction: column;
   background: url("https://stardewvalley.net/wp-content/uploads/2017/12/stardewbackground.png") no-repeat fixed center center / cover;
   background-color: #3b2b2b;
+  width: 100%; /* Asegurarse de que el body ocupe todo el ancho */
+  height: 100vh; /* Asegurarse de que el body ocupe toda la altura visible */
 }
 
 .main-container {
@@ -51,6 +53,7 @@ footer {
   color: #fff;
   padding: 20px;
   text-align: center;
+  margin-top: auto; /* Empujar el footer hacia abajo */
 }
 
 .footer-content {
